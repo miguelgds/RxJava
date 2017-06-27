@@ -8,16 +8,16 @@ import rx.schedulers.Schedulers;
 import es.miguelgs.pruebas.utils.Printer;
 
 /**
- * • Observable without any Scheduler works like a single-threaded program with
- *	 blocking method calls passing data between one another.
- * • Observable with a single subscribeOn() is like starting a big task in the back‐
+ * <p>Observable without any Scheduler works like a single-threaded program with
+ *	 blocking method calls passing data between one another.</p>
+ * <p>Observable with a single subscribeOn() is like starting a big task in the back‐
  *	 ground Thread. The program within that Thread is still sequential, but at least it
- *	 runs in the background.
- * • Observable using flatMap() where each internal Observable has subscribeOn() 
+ *	 runs in the background.</p>
+ * <p>Observable using flatMap() where each internal Observable has subscribeOn() 
  *	 works like ForkJoinPool from java.util.concurrent, where each substream 
- *	 is a fork of execution and flatMap() is a safe join stage.
- * @author Miguel
+ *	 is a fork of execution and flatMap() is a safe join stage.</p>
  *
+ * @author Miguel
  */
 public class ImperativeConcurrencyTest {
 
